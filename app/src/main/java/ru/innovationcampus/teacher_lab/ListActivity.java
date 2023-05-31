@@ -27,10 +27,7 @@ public class ListActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        students = DataLoader.getStudents(() -> {
-            runOnUiThread(() -> {
-                studentsAdapter.notifyDataSetChanged();
-            });
-        });
+        students = DataLoader.getStudents();
+        studentsAdapter.notifyDataSetChanged();
     }
 }

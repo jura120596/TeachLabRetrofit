@@ -10,7 +10,7 @@ import ru.innovationcampus.teacher_lab.mocks.Retrofit;
 public class DataLoader {
     static ArrayList<String> students = new ArrayList<>();
 
-    public static ArrayList<String> getStudents(Runnable runnable) {
+    public static ArrayList<String> getStudents() {
         Retrofit retrofit  = Retrofit.build();
         StudentService service = retrofit.create(StudentService.class);
         Call<ArrayList<String>> call = service.getStudents();
@@ -21,7 +21,6 @@ public class DataLoader {
                 if (body!=null) {
                     students.clear();
                     students.addAll(body);
-                    runnable.run();
                 }
             }
 

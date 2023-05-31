@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Журнал24/7</string>
+    <string name="title">Система контроля успеваемости учеников</string>
+    <string name="login">Войти</string>
+</resources>
